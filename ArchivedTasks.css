@@ -1,0 +1,366 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: url('images/PinkBgClear.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    color: white;
+}
+
+/* Fix header alignment */
+.header {
+    display: flexbox;
+    justify-content:center; /* Centers the search bar */
+    align-items: center;
+    padding: 20px 0;
+    width: calc(100% - 250px); /* Adjusts width after the sidebar */
+    margin-left: 300px; /* Offsets for sidebar */
+    background: transparent;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+
+.search-container input {
+    width: 500px;
+    height: 40px;
+    padding-left: 44px;
+    padding-right: 16px;
+    font-size: 16px;
+    background: #F3F4F6;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.search-container svg {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: #171A1F;
+}
+
+/* Tasks Title */
+.tasks-title {
+    position: absolute;
+    top: 110px;
+    left: 300px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* Line Under Tasks */
+.tasks-line {
+    position: absolute;
+    top: 153px;
+    left: 300px;
+    width: 1200px;
+    height: 0;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-style: solid;
+}
+
+/* Sidebar */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 100vh;
+    background: #000000;
+    border-radius: 0px 16px 16px 0px;
+    box-shadow: 0px 17px 35px rgba(23, 26, 31, 0.24), 0px 0px 2px rgba(23, 26, 31, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Logo */
+.image {
+    position: absolute;
+    top: 58px;
+    left: 11px;
+    width: 240px;
+    height: 53px;
+}
+
+/* Sidebar Line */
+.line {
+    position: absolute;
+    top: 146px;
+    left: 8px;
+    width: 238px;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-style: solid;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    position: absolute;
+    top: 185px;
+    left: 15px;
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sidebar Menu Item */
+.sidebar-menu .sidebar-menu-item {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 6px;
+    gap: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+/* Sidebar Icons */
+.sidebar-menu .sidebar-menu-item i {
+    font-size: 18px;
+    width: 25px;
+}
+
+/* Selected Item */
+.sidebar-menu .sidebar-menu-item.selected {
+    font-weight: 700;
+    color: #A03794;
+    background: #E9BFE4;
+}
+
+/* Sidebar Hover */
+.sidebar-menu .sidebar-menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Bottom Line */
+.line-bottom {
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+    width: 231px;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-style: solid;
+}
+
+/* Footer Text */
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 224px;
+    text-align: center;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+/* Main Content */
+.content {
+    margin-left: 280px;
+    padding: 20px;
+}
+
+/* Logout Button */
+.logout-btn {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Logout Button Icon */
+.logout-btn i {
+    font-size: 18px;
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+    background: #822D78;
+}
+
+/* Pressed Effect */
+.logout-btn:active {
+    background: #65235D;
+}
+
+/* Tasks Table */
+.tasks-wrapper {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: black;
+    position: absolute;
+    top: 170px;
+    left: 300px;
+    width: 1170px;
+    height: auto;
+    background: #FBF3FAFF;
+    border-radius: 16px;
+    box-shadow: 0px 17px 35px #171a1f3D, 0px 0px 2px #171a1f1F;
+    
+}
+.tasks-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tasks-table th, 
+.tasks-table td {
+    padding: 12px;
+    text-align: center; /* Aligns content properly */
+    border: 1px solid #ddd;
+    vertical-align: middle; /* Ensures vertical alignment */
+}
+
+.tasks-table th {
+    background-color: #800080; /* Dark purple header */
+    color: white;
+    font-weight: bold;
+}
+
+/* Fix alignment of Priority & Status */
+.priority-high, .priority-medium, .priority-low, 
+.status-pending, .status-inprogress, .status-completed {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 90px; /* Ensure uniform width */
+}
+
+/* Priority Colors */
+.priority-high { background-color: #ff6666; color: white; } /* Red */
+.priority-medium { background-color: #ffcc66; color: white; } /* Orange */
+.priority-low { background-color: #99e699; color: white; } /* Green */
+
+/* Status Colors */
+.status-pending { background-color: #ffeb99; color: black; } /* Yellow */
+.status-inprogress { background-color: #ffb366; color: white; } /* Orange */
+.status-completed { background-color: #99ff99; color: black; } /* Green */
+
+
+
+
+/* Common Button Style */
+.task-buttons button {
+    height: 35px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* Delete Task Button */
+.deletetaskbutton {
+    background: #E63946;
+}
+.deletetaskbutton:hover { background: #C62F3D; }
+.deletetaskbutton:active { background: #A12634; }
+
+
+/* Task Buttons Container */
+.task-buttons {
+    position: absolute;
+    top: 110px; /* Aligns with the other buttons */
+    left: 1230px; /* Adjusted to fit Archive button */
+    display: flex;
+    gap: 10px;
+}
+
+/* Common Button Styles */
+.button {
+    width: 110px;
+    height: 35px;
+    padding: 8px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    background: #A03794;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+    box-shadow: 0px 8px 17px #171a1f26, 0px 0px 2px #171a1f1F;
+}
+
+/* Hover Effects */
+.button:hover {
+    background: #822D78;
+}
+
+.button:active {
+    background: #65235D;
+}
+
+/* Archive Button */
+.Move-button {
+    background: #FFA500; /* Orange color */
+}
+
+/* Hover & Active Effects */
+.Move-button:hover {
+    background: #E69500;
+}
+
+.Move-button:active {
+    background: #CC8400;
+}
+

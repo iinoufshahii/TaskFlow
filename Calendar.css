@@ -1,0 +1,280 @@
+html {
+    font-size: 80%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: url('images/PinkBgClear.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+}
+
+
+/* Main Content */
+.main-content {
+    margin-left: 200px; /* Adjusted to fit sidebar */
+    padding: 20px;
+    width: calc(100% - 270px);
+    text-align: center;
+    color: white;
+}
+
+/* Calendar Styling */
+section {
+    width: 80%;
+    margin: auto;
+}
+
+/* Calendar Title */
+h1#year {
+    font-size: 3.5em;
+    font-weight: bold;
+    padding: 1em;
+    border-bottom: 5px ;
+    margin-bottom: 80px;
+}
+
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.month {
+    background: white;
+    color: black;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 260px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h4 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #f09;
+    margin-bottom: 0.5em;
+}
+
+.daysOfTheWeek, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.day:hover {
+    background: #f09;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(255, 105, 180, 0.5);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.week {
+    font-weight: bold;
+    color: #f09;
+}
+
+.today {
+    color: white;
+    background: #f09;
+    border-radius: 50%;
+}
+
+.empty {
+    visibility: hidden;
+}
+
+/* Tasks Title */
+.tasks-title {
+    position: absolute;
+    top: 110px;
+    left: 300px;
+    font-family: 'Archivo', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* Line Under Tasks */
+.tasks-line {
+    position: absolute;
+    top: 153px;
+    left: 300px;
+    width: 1200px;
+    height: 0;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-style: solid;
+}
+
+/* Sidebar */
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 100vh;
+    background: #000000;
+    border-radius: 0px 16px 16px 0px;
+    box-shadow: 0px 17px 35px rgba(23, 26, 31, 0.24), 0px 0px 2px rgba(23, 26, 31, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Logo */
+.image {
+    position: absolute;
+    top: 58px;
+    left: 11px;
+    width: 240px;
+    height: 53px;
+}
+
+/* Sidebar Line */
+.line {
+    position: absolute;
+    top: 146px;
+    left: 8px;
+    width: 238px;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-style: solid;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    position: absolute;
+    top: 185px;
+    left: 15px;
+    width: 224px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sidebar Menu Item */
+.sidebar-menu .sidebar-menu-item {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #FFFFFF;
+    background: #000000;
+    border-radius: 6px;
+    gap: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+/* Sidebar Icons */
+.sidebar-menu .sidebar-menu-item i {
+    font-size: 18px;
+    width: 25px;
+}
+
+/* Selected Item */
+.sidebar-menu .sidebar-menu-item.selected {
+    font-weight: 700;
+    color: #A03794;
+    background: #E9BFE4;
+}
+
+/* Sidebar Hover */
+.sidebar-menu .sidebar-menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Bottom Line */
+.line-bottom {
+    position: absolute;
+    bottom: 80px;
+    left: 15px;
+    width: 231px;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-style: solid;
+}
+
+/* Footer Text */
+.footer-text {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    width: 224px;
+    text-align: center;
+    font-size: 11px;
+    color: #FFFFFF;
+}
+
+/* Main Content */
+.content {
+    margin-left: 280px;
+    padding: 20px;
+}
+
+/* Logout Button */
+.logout-btn {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Logout Button Icon */
+.logout-btn i {
+    font-size: 18px;
+}
+
+/* Hover Effect */
+.logout-btn:hover {
+    background: #822D78;
+}
+
+/* Pressed Effect */
+.logout-btn:active {
+    background: #65235D;
+}
